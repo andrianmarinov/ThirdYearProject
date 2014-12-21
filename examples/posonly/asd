@@ -1,0 +1,8 @@
+class(A,bird) :-
+   has_covering(A,feathers).
+class(A,mammal) :-
+   has_covering(A,hair).
+class(A,fish) :-
+   has_gills(A).
+class(A,reptile) :-
+   habitat(A,land).

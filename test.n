@@ -1,0 +1,1 @@
+findPattern(number(1,2),number(2,6),number(3,12),number(4,20),number(5,28)).
