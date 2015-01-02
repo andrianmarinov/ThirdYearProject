@@ -1,30 +1,31 @@
+:- set(clauselength,10).
+
 :- modeh(*,findPattern(+integer,+integer,+integer,+integer,-integer)).
 
+
 :- modeb(*,add(+integer,+integer,-integer)).
+:- modeb(*,add(+integer,#integer,-integer)).
+
+
 :- modeb(*,sub(+integer,+integer,-integer)).
+:- modeb(*,sub(+integer,#integer,-integer)).
 
 
-%:- modeb(*,add(-integer,-integer,-integer)).
-%:- modeb(*,add(-integer,-integer,+integer)).
-%:- modeb(*,add(-integer,+integer,-integer)).
-%:- modeb(*,add(-integer,+integer,+integer)).
-%:- modeb(*,add(+integer,-integer,-integer)).
-%:- modeb(*,add(+integer,-integer,+integer)).
-%:- modeb(*,add(+integer,+integer,-integer)).
-%:- modeb(*,add(+integer,+integer,+integer)).
-
-%:- modeb(*,sub(-integer,-integer,-integer)).
-%:- modeb(*,sub(-integer,-integer,+integer)).
-%:- modeb(*,sub(-integer,+integer,-integer)).
-%:- modeb(*,sub(-integer,+integer,+integer)).
-%:- modeb(*,sub(+integer,-integer,-integer)).
-%:- modeb(*,sub(+integer,-integer,+integer)).
-%:- modeb(*,sub(+integer,+integer,-integer)).
-%:- modeb(*,sub(+integer,+integer,+integer)).
 
 :- determination(findPattern/5,add/3).
 :- determination(findPattern/5,sub/3).
-%1,5,11,19,29
+
+%add(A,B,C) :-
+%	integer(A),
+%	integer(B),
+%	C is A+B.
+
+
+%sub(A,B,C) :-
+%	integer(A),
+%	integer(B),
+%	C is A-B.
+
 
 add(0,0,0).
 add(0,1,1).
@@ -2627,6 +2628,7 @@ add(50,47,97).
 add(50,48,98).
 add(50,49,99).
 add(50,50,100).
+
 
 
 sub(0,0,0).

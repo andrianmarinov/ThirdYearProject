@@ -1,9 +1,6 @@
 %					     A          B        C       D        E
 
-:- modeh(*,findPattern(+float,+float,+float,+float,+float,+integer,+integer,+integer,+integer,-integer)).
-
-%:- modeh(*,findPattern(+integer,+integer,+integer,+integer,-integer)).
-
+:- modeh(*,findPattern(+float,+integer,+float,+integer,+float,+integer,+float,+integer,+float,-integer)).
 
 :- modeb(*,add(+integer,+integer,-integer)).
 :- modeb(*,add(+float,+integer,-integer)).
@@ -27,9 +24,14 @@
 
 
 :- determination(findPattern/10,add/3).
-%:- determination(findPattern/10,sub/3).
+:- determination(findPattern/10,sub/3).
+
 :- determination(findPattern/10,square/2).
-%:- determination(findPattern/10,mul/3).
+:- determination(findPattern/10,mul/3).
+
+:- determination(findPattern/10,div/3).
+:- determination(findPattern/10,div/3).
+
 
 add(A,B,C) :-
 	integer(A),
@@ -115,3 +117,29 @@ mul(A,B,C) :-
 	float(B),
 	E is round(B),
 	C is D*E.
+
+
+div(A,B,C) :-
+	integer(A),
+	integer(B),
+	C is A // B.
+
+
+div(A,B,C) :-
+	float(A),
+	D is round(A),
+	integer(B),
+	C is D // B.
+
+div(A,B,C) :-
+	integer(A),
+	float(B),
+	D is round(B),
+	C is A // D.
+
+div(A,B,C) :-
+	float(A),
+	D is round(A),
+	float(B),
+	E is round(B),
+	C is D // E.

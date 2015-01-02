@@ -1,19 +1,21 @@
-:- modeh(*,findPattern(+number,+number,+number,+number,-number)).
+:- modeh(*,findPattern(+number,+number,+number,+number,+number)).
 
 :- modeb(*,getNumber(+number,-integer)).
 :- modeb(*,getIndex(+number,-integer)).
 
 :- modeb(*,getDivisors(+number,-list)).
 :- modeb(*,getFactors(+integer,-list)).
+
 :- modeb(*,getSum(+list,-number)).
-:- modeb(*,getCount(+list,-number)).
+:- modeb(*,getCount(+list,+number)).
+
 :- modeb(*,list_sum(+list,-integer)).
 
 :- modeb(*,number(+integer,+integer)).
 
 :- determination(findPattern/5,getDivisors/2).
 :- determination(findPattern/5,getSum/2).
-:- determination(findPattern/5,getCount/2).
+%:- determination(findPattern/5,getCount/2).
 
 number(Index,SeqNumber).
 
@@ -41,6 +43,6 @@ list_sum(Tail, Sum1),
 TotalSum is Head + Sum1.
 
 
- getSum(A,number(SeqIndex,SeqNumber)) :-
+getSum(A,number(SeqIndex,SeqNumber)) :-
  	list_sum(A,SeqNumber),
  	number(SeqIndex,SeqNumber).

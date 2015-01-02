@@ -1,9 +1,6 @@
 %					     A          B        C       D        E
 
-:- modeh(*,findPattern(+float,+float,+float,+float,+float,+integer,+integer,+integer,+integer,-integer)).
-
-%:- modeh(*,findPattern(+integer,+integer,+integer,+integer,-integer)).
-
+:- modeh(*,findPattern(+float,+integer,+float,+integer,+float,+integer,+float,+integer,+float,-integer)).
 
 :- modeb(*,add(+integer,+integer,-integer)).
 :- modeb(*,add(+float,+integer,-integer)).
@@ -27,8 +24,9 @@
 
 
 :- determination(findPattern/10,add/3).
-%:- determination(findPattern/10,sub/3).
-:- determination(findPattern/10,square/2).
+:- determination(findPattern/10,sub/3).
+
+%:- determination(findPattern/10,square/2).
 %:- determination(findPattern/10,mul/3).
 
 add(A,B,C) :-
